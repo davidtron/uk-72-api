@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<WarningList xmlns:gml="http://www.opengis.net/gml" xmlns:ns2="http://www.w3.org/1999/xlink"
+             xmlns:ns3="http://www.w3.org/2001/SMIL20/" xmlns="http://www.metoffice.gov.uk/xml/metoWarning"
+             xmlns:ns5="http://www.w3.org/2001/SMIL20/Language" gml:id="NSWWS-ded51cfa-5b1a-4559-a039-50404b3cb137">
+    <gml:description>2015-12-14T17:53:47Z</gml:description>
+    <gml:members>
+        <NSWWarning>
+            <issueDate xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <ZoneList>
+                <gml:members>
+                    <Zone>
+                        <gml:location>
+                            <gml:Polygon>
+                                <gml:exterior>
+                                    <gml:Ring>
+                                        <gml:curveMember>
+                                            <gml:Curve>
+                                                <gml:segments>
+                                                    <CardinalSpline>
+                                                        <gml:coordinates>54.3968,-1.8788 54.1145,-1.5986 53.6905,-1.4997
+                                                            53.6091,-1.8458 53.723,-2.0326 53.9337,-2.0436
+                                                            54.1209,-2.3182 54.4096,-2.2303
+                                                        </gml:coordinates>
+                                                    </CardinalSpline>
+                                                </gml:segments>
+                                            </gml:Curve>
+                                        </gml:curveMember>
+                                    </gml:Ring>
+                                </gml:exterior>
+                            </gml:Polygon>
+                        </gml:location>
+                        <RegionList>
+                            <gml:members>
+                                <Region>
+                                    <gml:featureMembers>
+                                        <Area>
+                                            <areaName>North Yorkshire</areaName>
+                                            <threshold>-1</threshold>
+                                        </Area>
+                                        <Area>
+                                            <areaName>West Yorkshire</areaName>
+                                            <threshold>-1</threshold>
+                                        </Area>
+                                    </gml:featureMembers>
+                                    <regionName>Yorkshire &amp; Humber</regionName>
+                                    <code>YH</code>
+                                    <threshold>-1</threshold>
+                                </Region>
+                            </gml:members>
+                        </RegionList>
+                        <warningLevel>YELLOW</warningLevel>
+                        <likelihood>3</likelihood>
+                        <impact>2</impact>
+                        <zoneId>280EC19A-E094-2677-3497-A02F481E21D7</zoneId>
+                    </Zone>
+                </gml:members>
+            </ZoneList>
+            <warningText>Outbreaks of rain will affect the region within the yellow warning area for a few hours during
+                the very late afternoon and evening on Tuesday. Whilst rainfall totals are not expected to be
+                particularly high, in view of current ground conditions please be aware of the possibility of some
+                localised flooding.
+            </warningText>
+            <forecasterText>Outbreaks of rain, heavy at times, reaching southwestern England on Tuesday morning will
+                move fairly quickly northeastwards across England, Wales and Northern Ireland to lie over a large part
+                of Scotland by Tuesday evening. This rain is likely to last approximately 4 or 5 hours in any one place.
+            </forecasterText>
+            <safetyText>The public is advised to take extra care, further information and advice can be found here: &lt;a
+                href=&quot;http://www.metoffice.gov.uk/public/weather/warnings/&quot;&gt;http://www.metoffice.gov.uk/public/weather/warnings/&lt;/a&gt;</safetyText>
+            <weather>RAIN</weather>
+            <createdDate>2015-12-14T11:13:35Z</createdDate>
+            <modifiedDate>2015-12-14T11:13:35Z</modifiedDate>
+            <validFrom>2015-12-15T16:00:00Z</validFrom>
+            <validTo>2015-12-15T21:00:00Z</validTo>
+            <status>ACTIVE</status>
+            <warningLevel>YELLOW</warningLevel>
+            <warningClass>WARNING</warningClass>
+            <warningLikelihood>3</warningLikelihood>
+            <warningImpact>2</warningImpact>
+            <safetyList></safetyList>
+            <warningId>013B3DE3-D523-599F-64D5-A02E9AB02ADC</warningId>
+            <version>1</version>
+            <iconPos>54.3968,-1.8788</iconPos>
+            <iconSticky>true</iconSticky>
+        </NSWWarning>
+        <NSWWarning>
+            <issueDate xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <ZoneList>
+                <gml:members>
+                    <Zone>
+                        <gml:location>
+                            <gml:Polygon>
+                                <gml:exterior>
+                                    <gml:Ring>
+                                        <gml:curveMember>
+                                            <gml:Curve>
+                                                <gml:segments>
+                                                    <CardinalSpline>
+                                                        <gml:coordinates>54.8358,-3.3071 54.8801,-3.0544 54.8864,-2.9005
+                                                            54.9054,-2.7138 54.671,-2.538 54.4224,-2.2193
+                                                            54.3521,-1.8897 54.0758,-1.7359 53.6742,-1.681
+                                                            53.6482,-1.8897 53.7132,-2.1864 53.7067,-2.527
+                                                            53.9854,-2.8126 54.1595,-2.8566 54.3008,-3.318
+                                                            54.5501,-3.5378
+                                                        </gml:coordinates>
+                                                    </CardinalSpline>
+                                                </gml:segments>
+                                            </gml:Curve>
+                                        </gml:curveMember>
+                                    </gml:Ring>
+                                </gml:exterior>
+                            </gml:Polygon>
+                        </gml:location>
+                        <RegionList>
+                            <gml:members>
+                                <Region>
+                                    <gml:featureMembers>
+                                        <Area>
+                                            <areaName>Blackburn with Darwen</areaName>
+                                            <threshold>15mm/1hr</threshold>
+                                        </Area>
+                                        <Area>
+                                            <areaName>Cumbria</areaName>
+                                            <threshold>-1</threshold>
+                                        </Area>
+                                        <Area>
+                                            <areaName>Lancashire</areaName>
+                                            <threshold>-1</threshold>
+                                        </Area>
+                                    </gml:featureMembers>
+                                    <regionName>North West England</regionName>
+                                    <code>NW</code>
+                                    <threshold>-1</threshold>
+                                </Region>
+                                <Region>
+                                    <gml:featureMembers>
+                                        <Area>
+                                            <areaName>North Yorkshire</areaName>
+                                            <threshold>-1</threshold>
+                                        </Area>
+                                        <Area>
+                                            <areaName>West Yorkshire</areaName>
+                                            <threshold>-1</threshold>
+                                        </Area>
+                                    </gml:featureMembers>
+                                    <regionName>Yorkshire &amp; Humber</regionName>
+                                    <code>YH</code>
+                                    <threshold>-1</threshold>
+                                </Region>
+                            </gml:members>
+                        </RegionList>
+                        <warningLevel>YELLOW</warningLevel>
+                        <likelihood>1</likelihood>
+                        <impact>3</impact>
+                        <zoneId>D5FFA287-8A86-F188-5BF9-9E83014CB238</zoneId>
+                    </Zone>
+                </gml:members>
+            </ZoneList>
+            <warningText>An area of rain is expected to move northeastwards across northern England from very early on
+                Thursday, clearing east through the afternoon. Some heavy and persistent rain is likely, primarily over
+                the high ground of Cumbria, Lancashire and Yorkshire, and there is a very low likelihood this may lead
+                to renewed disruption from flooding in some recently affected areas.
+
+                Please be aware of the potential for further localised disruption.
+            </warningText>
+            <forecasterText>Very mild and moist air will be drawn up from subtropical latitudes across the UK on
+                Thursday. This will be associated with some strong winds and is likely to result in some heavy rain over
+                parts of northern England, in particular the high ground of Cumbria, Lancashire and Yorkshire.
+
+                Rainfall totals of 20-30 mm are likely over the high ground with perhaps 50-60 mm at the most exposed
+                sites. This would usually not be of concern but following recent severe flooding, these areas are more
+                responsive to relatively small amounts of rain. There is therefore a very low likelihood of medium
+                impacts from renewed flooding in some of these areas.
+
+                This alert is likely to be updated in the coming days as recovery work proceeds and the impact
+                assessment is revisited in the light of new information.
+            </forecasterText>
+            <safetyText>The public is advised to take extra care, further information and advice can be found here: &lt;a
+                href=&quot;http://www.metoffice.gov.uk/public/weather/warnings/&quot;&gt;http://www.metoffice.gov.uk/public/weather/warnings/&lt;/a&gt;</safetyText>
+            <weather>RAIN</weather>
+            <createdDate>2015-12-14T11:28:47Z</createdDate>
+            <modifiedDate>2015-12-14T11:28:47Z</modifiedDate>
+            <validFrom>2015-12-17T00:15:00Z</validFrom>
+            <validTo>2015-12-17T18:00:00Z</validTo>
+            <status>ACTIVE</status>
+            <warningLevel>YELLOW</warningLevel>
+            <warningClass>ALERT</warningClass>
+            <warningLikelihood>1</warningLikelihood>
+            <warningImpact>3</warningImpact>
+            <safetyList></safetyList>
+            <warningId>B5AD8853-06A4-A7C2-96D2-9E81580B2D25</warningId>
+            <version>2</version>
+            <iconPos>54.8358,-3.3071</iconPos>
+            <iconSticky>true</iconSticky>
+        </NSWWarning>
+    </gml:members>
+</WarningList>

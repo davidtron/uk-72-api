@@ -11,6 +11,14 @@
       {
         "region": "eu-west-1",
         "iamRoleArnLambda": "arn:aws:iam::844736534595:role/uk-72-api-development-r-IamRoleLambda-1MZ0K6F317NVW",
+        "regionBucket": "serverless.euwest1.uk72.co.uk",
+        "restApiId": "3tvc4lnrvi"
+      }
+    ],
+    "production": [
+      {
+        "region": "eu-west-1",
+        "iamRoleArnLambda": "arn:aws:iam::844736534595:role/uk-72-api-production-r-IamRoleLambda-13OMU070DSHP0",
         "regionBucket": "serverless.euwest1.uk72.co.uk"
       }
     ]

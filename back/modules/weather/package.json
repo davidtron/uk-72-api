@@ -1,0 +1,28 @@
+{
+  "name": "weather",
+  "version": "0.0.1",
+  "description": "Serverless Node.js Module that retrieves MetOffice Severe weather warnings XML and presents a JSON API",
+  "scripts": {
+    "test": "node test/weather-warning-test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidtron/aws-lambda-pipeline.git"
+  },
+  "keywords": [
+    "AWS-Lambda",
+    "AWS-API"
+  ],
+  "author": "David Parry",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "tape": "^4.2.2"
+  },
+  "dependencies": {
+    "bluebird": "^3.0.6",
+    "request": "^2.67.0",
+    "serverless-helpers-js": "~0.0.3",
+    "xml2js": "^0.4.15"
+  }
+}

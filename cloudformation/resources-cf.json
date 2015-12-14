@@ -16,13 +16,15 @@
     "aaStage": {
       "Type": "String",
       "AllowedValues": [
-        "development"
+        "development",
+        "production"
       ]
     },
     "aaDataModelStage": {
       "Type": "String",
       "AllowedValues": [
-        "development"
+        "development",
+        "production"
       ]
     },
     "aaNotficationEmail": {
