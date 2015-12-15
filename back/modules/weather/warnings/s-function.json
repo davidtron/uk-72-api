@@ -8,8 +8,9 @@
       "handler": "modules/weather/warnings/handler.handler",
       "timeout": 6,
       "memorySize": 128,
-      "endpoints": {
-        "weather/warnings": {
+      "endpoints": [
+        {
+          "path" : "weather/warnings",
           "method": "GET",
           "authorizationType": "none",
           "apiKeyRequired": false,
@@ -31,8 +32,7 @@
             }
           }
         }
-      },
-      "name": "warnings"
+      ]
     }
   }
 }
