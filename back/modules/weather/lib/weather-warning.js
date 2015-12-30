@@ -19,23 +19,35 @@ function parseXMLToJSON(xmlFile) {
 function processWeatherWarnings(data) {
     var weatherWarnings = [];
 
-    if(data.WarningList.members.NSWWarning.length > 0) {
-        data.WarningList.members.NSWWarning.forEach(function(warning) {
+    function createWeatherWarning(warning) {
+        var processedWarning = {
+            'validFrom': warning.validFrom,
+            'validTo': warning.validTo,
+            'weather': warning.weather,
+            'warningText': warning.warningText,
+            'warningLevel': warning.warningLevel,
+            'warningClass': warning.warningClass,
+            'warningLikelihood': warning.warningLikelihood,
+            'warningImpact': warning.warningImpact,
+            'id': warning.warningId,
+            'coord': extractWeatherCoordinate(warning)
+        };
+        weatherWarnings.push(processedWarning);
+    }
 
-                var processedWarning = {
-                    'validFrom': warning.validFrom,
-                    'validTo': warning.validTo,
-                    'weather' : warning.weather,
-                    'warningText' : warning.warningText,
-                    'warningLevel' : warning.warningLevel,
-                    'warningClass' : warning.warningClass,
-                    'warningLikelihood' : warning.warningLikelihood,
-                    'warningImpact' : warning.warningImpact,
-                    'id' : warning.warningId,
-                    'coord' : extractWeatherCoordinate(warning)
-                };
-                weatherWarnings.push(processedWarning);
-            });
+    // Since we have disabled explicit array, the json can be in 2 forms
+    // Multiple warnings are in array  i.e data.WarningList.members.NSWWarning.length > 0 === true
+    // Single warnings are in object
+
+
+    if(data.WarningList.members.NSWWarning.length > 0) {
+        data.WarningList.members.NSWWarning.forEach(function (warning) {
+            // Process each warning
+            createWeatherWarning(warning);
+        });
+    } else if(data.WarningList.members.NSWWarning) {
+        // Assume single warning
+        createWeatherWarning(data.WarningList.members.NSWWarning)
 
     } else {
         console.log("No weather warnings");
