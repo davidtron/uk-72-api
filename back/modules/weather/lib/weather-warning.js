@@ -50,8 +50,11 @@ function processWeatherWarnings(data) {
         createWeatherWarning(data.WarningList.members.NSWWarning)
 
     } else {
-        console.log("No weather warnings");
+        console.log('No weather warnings found');
     }
+
+    console.log('Returning '+ weatherWarnings.length + ' weather warnings');
+
     return weatherWarnings;
 }
 
@@ -89,7 +92,7 @@ module.exports.respond = function (event, callback) {
             callback(null, warnings);
         })
         .catch(function (err) {
-            console.log("Caught error " + err);
+            console.log('Caught error ' + err);
             callback(err, null);
         });
 };
