@@ -1,0 +1,7 @@
+{
+    "areaCode": 15,
+    "powercutsSearchMM": false,
+    "data": "{ \"lastModified\": 1449357007000, \"powercuts\": { \"DH7 7DD\": {\"areacode\": 15,\"category\": \"Unknown P2\",\"class\": \"models.MapDataPowercut\",\"contact\": \"OLIVER, CHRIS\",\"customerStageSequence\": 3,\"elapsed\": \"00d 01:13\",\"entityId\": 1239,\"estimatedTimeTillResolution\": 1449375300000,\"group\": \"RESTORATION\",\"id\": 1239,\"lat\": 54.7833,\"lng\": -1.63276,\"location\": \"DH7 7DJ, RITSON AVENUE SS, Transformer LV\",\"logged\": 1449352620000,\"natureOfOutage\": \"Localised Fault\",\"networkObject\": \"64658\",\"numberOfCalls\": 2,\"persistent\": false,\"postcode\": \"DH7 7DD\",\"prefix\": null,\"priority\": 4,\"reference\": \"INCD-339948-h\",\"region\": \"Tyne and Wear / Durham 2\",\"stageSequence\": 3,\"stageSequenceHistory\": \"05/12/2015 22:10:06 - 1<br />05/12/2015 23:05:13 - 3<br />\",\"startnumber\": 0,\"status\": \"In Progress\",\"totalConfirmedOff\": 0,\"totalPredictedOff\": 146,\"totalResourceAssigned\": 0,\"totalResourceDispatched\": 1,\"totalResourceOnsite\": 0,\"totalRestored\": 0,\"totalSensitiveAffected\": 7,\"type\": \"LV\" }}}",
+    "powercutsHideCustomerCountMM": true,
+    "success": true
+}

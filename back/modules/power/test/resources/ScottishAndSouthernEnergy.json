@@ -1,0 +1,143 @@
+{
+  "timestampUtc": "2015-12-06T00:46:22Z",
+  "faults": [
+    {
+      "title": "PH2 Area",
+      "reference": "AG2916",
+      "loggedAtUtc": "2015-12-05T23:17:00Z",
+      "type": "HV",
+      "location": {
+        "latitude": 56.358715046569145,
+        "longitude": -3.416573121329034
+      },
+      "estimatedFaultUpdateTimeUtc": "2015-12-06T01:20:00Z",
+      "message": "We apologise for the loss of supply. We currently have a fault affecting the areas listed. Our engineers are working to get the power back on as quickly as they can. If you need more information, please call us on 0800 300 999 and quote reference 'AG2916'",
+      "affectedAreas": [
+        "PH2 8PY",
+        "PH2 8PZ",
+        "PH2 8QR"
+      ],
+      "uri": "http://api.sse.com/powerdistribution/network/v3/api/fault/AG2916",
+      "depotCode": "70"
+    },
+    {
+      "title": "PA31 Area",
+      "reference": "AG2918",
+      "loggedAtUtc": "2015-12-05T23:06:00Z",
+      "type": "HV",
+      "location": {
+        "latitude": 56.211104793038039,
+        "longitude": -5.5032216753764649
+      },
+      "estimatedArrivalOnSiteUtc": "2015-12-06T00:01:00Z",
+      "estimatedRestorationTimeUtc": "2015-12-06T03:00:00Z",
+      "message": "We apologise for the loss of supply. We currently have a fault affecting the areas listed. Our engineers are on site working to get the power back on as quickly as they can. If you need more information, please call us on 0800 300 999 and quote reference 'AG2918'",
+      "affectedAreas": [
+        "PA31",
+        "PA31 8AJ",
+        "PA31 8HY",
+        "PA31 8HZ",
+        "PA31 8JA",
+        "PA31 8JE",
+        "PA31 8NE",
+        "PA31 8QE",
+        "PA31 8QG",
+        "PA31 8QN",
+        "PA31 8QP",
+        "PA31 8QR",
+        "PA31 8QS",
+        "PA31 8QW",
+        "PA31 8RQ",
+        "PA31 8SD",
+        "PA31 8UA",
+        "PA31 8UB",
+        "PA31 8US",
+        "PA31 8UU",
+        "PA33 1BP",
+        "PA34",
+        "PA34 4HH",
+        "PA34 4QP",
+        "PA34 4RB",
+        "PA34 4XA",
+        "PA34 4XB",
+        "PA34 4XD",
+        "PA34 4XE",
+        "PA34 4XF",
+        "PA34 4XG",
+        "PA34 4XH",
+        "PA34 4XQ",
+        "PA34 4XU"
+      ],
+      "uri": "http://api.sse.com/powerdistribution/network/v3/api/fault/AG2918",
+      "depotCode": "57"
+    },
+    {
+      "title": "PA34 Area",
+      "reference": "AG2913",
+      "loggedAtUtc": "2015-12-05T23:06:00Z",
+      "type": "HV",
+      "location": {
+        "latitude": 56.276671000040722,
+        "longitude": -5.615786216451653
+      },
+      "estimatedRestorationTimeUtc": "2015-12-06T03:00:00Z",
+      "message": "We apologise for the loss of supply. We currently have a fault affecting the areas listed. Our engineers are on site working to get the power back on as quickly as they can. If you need more information, please call us on 0800 300 999 and quote reference 'AG2913'",
+      "affectedAreas": [
+        "PA34 4EG",
+        "PA34 4GH",
+        "PA34 4QZ",
+        "PA34 4RA",
+        "PA34 4RB",
+        "PA34 4RD",
+        "PA34 4RF",
+        "PA34 4RJ",
+        "PA34 4TB",
+        "PA34 4TE",
+        "PA34 4TF",
+        "PA34 4TH",
+        "PA34 4TJ",
+        "PA34 4TL",
+        "PA34 4TN",
+        "PA34 4TP",
+        "PA34 4TR",
+        "PA34 4TU",
+        "PA34 4TW",
+        "PA34 4TX",
+        "PA34 4TY",
+        "PA34 4TZ",
+        "PA34 4UA",
+        "PA34 4UB",
+        "PA34 4UD",
+        "PA34 4UE",
+        "PA34 4UF",
+        "PA34 4UG",
+        "PA34 4UH"
+      ],
+      "uri": "http://api.sse.com/powerdistribution/network/v3/api/fault/AG2913",
+      "depotCode": "57"
+    },
+    {
+      "title": "SP6 Area",
+      "reference": "AG2661",
+      "loggedAtUtc": "2015-12-05T14:58:00Z",
+      "type": "HV",
+      "location": {
+        "latitude": 50.979405108287082,
+        "longitude": -1.9105652210901842
+      },
+      "estimatedRestorationTimeUtc": "2015-12-06T02:00:00Z",
+      "engineerOnSiteTimeUtc": "2015-12-05T15:08:00Z",
+      "message": "We apologise for the loss of supply. We currently have a fault affecting the areas listed. Our engineers are on site working to get the power back on as quickly as they can. If you need more information, please call us on 0800 072 7282 and quote reference 'AG2661'",
+      "affectedAreas": [
+        "SP6 3LA",
+        "SP6 3LR",
+        "SP6 3LS",
+        "SP6 3LT"
+      ],
+      "uri": "http://api.sse.com/powerdistribution/network/v3/api/fault/AG2661",
+      "depotCode": "51"
+    }
+  ],
+  "uri": "http://api.sse.com/powerdistribution/network/v3/api/faults/",
+  "message": "4 reported faults"
+}

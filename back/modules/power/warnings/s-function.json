@@ -1,0 +1,39 @@
+{
+  "functions": {
+    "PowerWarnings": {
+      "custom": {
+        "excludePatterns": [],
+        "envVars": []
+      },
+      "handler": "modules/power/warnings/handler.handler",
+      "timeout": 10,
+      "memorySize": 128,
+      "eventSourceArn": "",
+      "endpoints": [
+        {
+          "path": "power/warnings",
+          "method": "POST",
+          "authorizationType": "none",
+          "apiKeyRequired": false,
+          "requestParameters": {},
+          "requestTemplates": {
+            "application/json": ""
+          },
+          "responses": {
+            "400": {
+              "statusCode": "400"
+            },
+            "default": {
+              "statusCode": "200",
+              "responseParameters": {},
+              "responseModels": {},
+              "responseTemplates": {
+                "application/json": ""
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}
