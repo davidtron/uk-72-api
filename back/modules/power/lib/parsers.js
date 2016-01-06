@@ -8,10 +8,12 @@ function ukpowernetworksParser(arrayOfJSResults, postCodePlus) {
 
     // Map each js file into our data structure
     var incidentsArrays = arrayOfJSResults.map(function (result) {
-
         var jsString = result.body;
+        jsString = jsString.replace(/,\s*,/g, ',null,null,');
+
         var startPos = jsString.indexOf('= [');
         var endPos = jsString.indexOf('];');
+
         jsString = jsString.substring(startPos + 1, endPos + 1);
         var res = JSON.parse(jsString);
 
