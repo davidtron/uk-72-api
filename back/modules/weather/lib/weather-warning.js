@@ -92,7 +92,8 @@ module.exports.respond = function (event, callback) {
             callback(null, warnings);
         })
         .catch(function (err) {
-            console.log('Caught error ' + err);
+            console.log('XML being processed', xml);
+            console.log('Caught error ' + err.toString());
             callback(err, null);
         });
 };
