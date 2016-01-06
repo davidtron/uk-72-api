@@ -6,8 +6,41 @@ var request = Promise.promisifyAll(require('request'));
 var parsers = require('./parsers.js');
 
 
+module.exports.lookupByDNOAndPostcode = function (event, cb) {
 
-module.exports.respond = function (event, cb) {
+    var postcode = event.postcode;
+    var dno = event.dno;
+    if(!postcode) {
+        return cb(new Error('postcode required', null));
+    }
+
+    if(!dno) {
+        return cb(new Error('DNO required', null));
+    }
+
+
+    var area = postcode.split(" ")[0];
+    var district = postcode.split(" ")[1];
+
+
+    console.log('Postcode ' + postcode + ' has operator ID ' + dno);
+    getRegion(dno, postcode)
+        .then(function(result) {
+            return cb(null, result);
+        })
+        .catch(function (err) {
+            console.log("Failed to find power outages " + err);
+            return cb(err, null)
+        });
+};
+
+/**
+ * Lookup the DNO from the postcode, then call the relevent parser
+ * @param event containing postcode
+ * @param cb callback to lambda wrapper
+ * @returns {*}
+ */
+module.exports.lookupByPostcode = function (event, cb) {
 
     var postcode = event.postcode;
     if(!postcode) {
