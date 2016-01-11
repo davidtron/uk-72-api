@@ -5,7 +5,12 @@ var Promise = require('bluebird');
 var request = Promise.promisifyAll(require('request'));
 var parsers = require('./parsers.js');
 
-
+/**
+ * Call the provider with given DNO and postcode and use relevant parser
+ * @param event containing postcode and dno
+ * @param cb
+ * @returns {*}
+ */
 module.exports.lookupByDNOAndPostcode = function (event, cb) {
 
     var postcode = event.postcode;
@@ -17,11 +22,6 @@ module.exports.lookupByDNOAndPostcode = function (event, cb) {
     if(!dno) {
         return cb(new Error('DNO required', null));
     }
-
-
-    var area = postcode.split(" ")[0];
-    var district = postcode.split(" ")[1];
-
 
     console.log('Postcode ' + postcode + ' has operator ID ' + dno);
     getRegion(dno, postcode)
@@ -35,7 +35,7 @@ module.exports.lookupByDNOAndPostcode = function (event, cb) {
 };
 
 /**
- * Lookup the DNO from the postcode, then call the relevent parser
+ * Lookup the DNO from the postcode, then call the provider and use relevant parser
  * @param event containing postcode
  * @param cb callback to lambda wrapper
  * @returns {*}

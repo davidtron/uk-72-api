@@ -40,7 +40,7 @@ function processWeatherWarnings(data) {
     // Single warnings are in object
 
 
-    if(data.WarningList.members.NSWWarning.length > 0) {
+    if(data.WarningList.members.NSWWarning && data.WarningList.members.NSWWarning.length > 0) {
         data.WarningList.members.NSWWarning.forEach(function (warning) {
             // Process each warning
             createWeatherWarning(warning);
@@ -50,7 +50,7 @@ function processWeatherWarnings(data) {
         createWeatherWarning(data.WarningList.members.NSWWarning)
 
     } else {
-        console.log('No weather warnings found');
+        console.log('No weather warnings found in\n',data);
     }
 
     console.log('Returning '+ weatherWarnings.length + ' weather warnings');
