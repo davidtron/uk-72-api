@@ -2,7 +2,14 @@
 
 var util = require('util');
 var cheerio = require('cheerio');
+var moment = require('moment');
 
+
+function dateConv(str, format) {
+    var parsed = moment(str, format);
+    if(parsed.isValid()) return parsed.format();
+    return null;
+}
 
 function ukpowernetworksParser(arrayOfJSResults, postCodePlus) {
 
@@ -18,13 +25,14 @@ function ukpowernetworksParser(arrayOfJSResults, postCodePlus) {
         var res = JSON.parse(jsString);
 
         return res.map(function (incidentArray) {
+
             return {
                 'latitude': incidentArray[4],
                 'longitude': incidentArray[5],
-                'timeOfIncident': incidentArray[1],
+                'timeOfIncident': dateConv(incidentArray[1], 'DD-MMM-YYYY HH:mm'),
                 'postCode': incidentArray[6].split(','),
                 'numberEffected': incidentArray[7],
-                'restorationTime': incidentArray[2],
+                'restorationTime': dateConv(incidentArray[2], 'DD-MMM-YYYY HH:mm'),
                 'info': incidentArray[8]
             };
         });
@@ -58,10 +66,10 @@ function westernPowerParser(html) {
         return {
             'latitude': new Number(currentValue.Latitude).valueOf(),
             'longitude': new Number(currentValue.Longitude).valueOf(),
-            'timeOfIncident': rowData[0],
+            'timeOfIncident': dateConv(rowData[0], 'DD-MM-YYYY HH:mm'),
             'postCode': rowData[1].split(','),
             'numberEffected': rowData[2],
-            'restorationTime': rowData[3],
+            'restorationTime': dateConv(rowData[3], 'DD-MM-YYYY HH:mm'),
             'info': 'For further information please contact us on 0800 6783 105'
         };
     });
@@ -127,10 +135,10 @@ function northernPowerGridParser(html, postcode) {
         outages.push({
             'latitude': powercut.lat,
             'longitude': powercut.lng,
-            'timeOfIncident': new Date(powercut.logged).toUTCString(),
+            'timeOfIncident': dateConv(powercut.logged, 'x'),
             'postCode': [powercut.postcode],
             'numberEffected': powercut.totalPredictedOff,
-            'restorationTime': new Date(powercut.estimatedTimeTillResolution).toUTCString(),
+            'restorationTime': dateConv(powercut.estimatedTimeTillResolution, 'x'),
             'info': 'Our reference number: ' + powercut.reference
         });
     }
@@ -155,10 +163,10 @@ function scottishAndSouthernParser(json) {
             return {
                 'latitude': outage.location.latitude,
                 'longitude': outage.location.longitude,
-                'timeOfIncident': outage.loggedAtUtc,
+                'timeOfIncident': dateConv(outage.loggedAtUtc, 'YYYY-MM-DDTHH:mm:ssZ'),
                 'postCode': outage.affectedAreas,
                 'numberEffected': null,
-                'restorationTime': outage.estimatedRestorationTimeUtc,
+                'restorationTime': dateConv(outage.estimatedRestorationTimeUtc, 'YYYY-MM-DDTHH:mm:ssZ'),
                 'info': outage.message
             };
         });
@@ -175,14 +183,16 @@ function electricityNorthWestParser(json) {
     var innerString = json.toJSON().body.d;
     var data = JSON.parse(innerString);
 
+
+
     var outages = data.map(function (incidentArray) {
         return {
             'latitude': incidentArray.Latitude,
             'longitude': incidentArray.Longitude,
-            'timeOfIncident': incidentArray.OutageDate,
+            'timeOfIncident': dateConv(incidentArray.OutageDate, 'DD/MM/YYYY HH:mm'),
             'postCode': incidentArray.FullPostcode,
             'numberEffected': null,
-            'restorationTime': incidentArray.EstimatedTimeOfRestoration,
+            'restorationTime': dateConv(incidentArray.EstimatedTimeOfRestoration, 'DD/MM/YYYY HH:mm'),
             'info': incidentArray.CustomerInformation
         };
     });
@@ -213,10 +223,10 @@ function gtcParser(html) {
             outages.push({
                 'latitude': null,
                 'longitude': null,
-                'timeOfIncident': data[2],
+                'timeOfIncident': dateConv(data[2], 'MMM DD, YYYY, hh:mm A'),
                 'postCode': [attemptToGetPostcode],
                 'numberEffected': null,
-                'restorationTime': data[3],
+                'restorationTime': dateConv(data[3], 'MMM DD, YYYY, hh:mm A'),
                 'info': data[6]
             });
         }

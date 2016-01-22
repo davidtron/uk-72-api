@@ -23,16 +23,16 @@ test('parse js files from UK Power Networks', function (assert) {
             longitude: -0.20322081178779097,
             numberEffected: 'To Be Confirmed',
             postCode: ['NW6 2', 'NW6 7'],
-            restorationTime: 'To Be Confirmed',
-            timeOfIncident: '21-NOV-2015 08:10'
+            timeOfIncident: '2015-11-21T08:10:00+00:00',
+            restorationTime: null
         }, {
             info: 'Power was lost.',
             latitude: 51.547334689853436,
             longitude: -0.12609979526747322,
             numberEffected: '30',
             postCode: ['N7 9'],
-            restorationTime: 'To Be Confirmed',
-            timeOfIncident: '06-DEC-2015 14:49'
+            timeOfIncident: '2015-12-06T14:49:00+00:00',
+            restorationTime: null
         }],
         uri: 'http://www.ukpowernetworks.co.uk/internet/en/fault-map/?postcode=WD5+1AB'
     };
@@ -53,16 +53,16 @@ test('parse html from Western Power', function (assert) {
                 longitude: -2.514667,
                 numberEffected: '222',
                 postCode: ['BS15 1'],
-                restorationTime: '06-12-2015 23:00',
-                timeOfIncident: '06-12-2015 19:53'
+                restorationTime: '2015-12-06T23:00:00+00:00',
+                timeOfIncident: '2015-12-06T19:53:00+00:00'
             }, {
                 info: 'For further information please contact us on 0800 6783 105',
                 latitude: 50.7401,
                 longitude: -2.784345,
                 numberEffected: '39',
                 postCode: ['DT6 6'],
-                restorationTime: 'Under review',
-                timeOfIncident: '06-12-2015 17:46'
+                restorationTime: null,
+                timeOfIncident: '2015-12-06T17:46:00+00:00'
             }],
             uri: 'http://www.westernpower.co.uk/Power-outages/Power-cuts-in-your-area.aspx'
         };
@@ -113,10 +113,10 @@ test('process json from Northern Power Grid', function (assert) {
             outages: [{
                 latitude: 54.7833,
                 longitude: -1.63276,
-                timeOfIncident: 'Sat, 05 Dec 2015 21:57:00 GMT',
+                timeOfIncident: '2015-12-05T21:57:00+00:00',
                 postCode: ['DH7 7DD'],
                 numberEffected: 146,
-                restorationTime: 'Sun, 06 Dec 2015 04:15:00 GMT',
+                restorationTime: '2015-12-06T04:15:00+00:00',
                 info: 'Our reference number: INCD-339948-h'
             }]
         };
@@ -143,32 +143,32 @@ test('process json from Scottish and Southern Energy', function (assert) {
                 longitude: -3.416573121329034,
                 numberEffected: null,
                 postCode: ['PH2 8PY', 'PH2 8PZ', 'PH2 8QR'],
-                restorationTime: undefined,
-                timeOfIncident: '2015-12-05T23:17:00Z'
+                restorationTime: null,
+                timeOfIncident: '2015-12-05T23:17:00+00:00'
             }, {
                 info: 'We apologise for the loss of supply. We currently have a fault affecting the areas listed. Our engineers are on site working to get the power back on as quickly as they can. If you need more information, please call us on 0800 300 999 and quote reference \'AG2918\'',
                 latitude: 56.21110479303804,
                 longitude: -5.503221675376465,
                 numberEffected: null,
                 postCode: ['PA31', 'PA31 8AJ', 'PA31 8HY', 'PA31 8HZ', 'PA31 8JA', 'PA31 8JE', 'PA31 8NE', 'PA31 8QE', 'PA31 8QG', 'PA31 8QN', 'PA31 8QP', 'PA31 8QR', 'PA31 8QS', 'PA31 8QW', 'PA31 8RQ', 'PA31 8SD', 'PA31 8UA', 'PA31 8UB', 'PA31 8US', 'PA31 8UU', 'PA33 1BP', 'PA34', 'PA34 4HH', 'PA34 4QP', 'PA34 4RB', 'PA34 4XA', 'PA34 4XB', 'PA34 4XD', 'PA34 4XE', 'PA34 4XF', 'PA34 4XG', 'PA34 4XH', 'PA34 4XQ', 'PA34 4XU'],
-                restorationTime: '2015-12-06T03:00:00Z',
-                timeOfIncident: '2015-12-05T23:06:00Z'
+                restorationTime: '2015-12-06T03:00:00+00:00',
+                timeOfIncident: '2015-12-05T23:06:00+00:00'
             }, {
                 info: 'We apologise for the loss of supply. We currently have a fault affecting the areas listed. Our engineers are on site working to get the power back on as quickly as they can. If you need more information, please call us on 0800 300 999 and quote reference \'AG2913\'',
                 latitude: 56.27667100004072,
                 longitude: -5.615786216451653,
                 numberEffected: null,
                 postCode: ['PA34 4EG', 'PA34 4GH', 'PA34 4QZ', 'PA34 4RA', 'PA34 4RB', 'PA34 4RD', 'PA34 4RF', 'PA34 4RJ', 'PA34 4TB', 'PA34 4TE', 'PA34 4TF', 'PA34 4TH', 'PA34 4TJ', 'PA34 4TL', 'PA34 4TN', 'PA34 4TP', 'PA34 4TR', 'PA34 4TU', 'PA34 4TW', 'PA34 4TX', 'PA34 4TY', 'PA34 4TZ', 'PA34 4UA', 'PA34 4UB', 'PA34 4UD', 'PA34 4UE', 'PA34 4UF', 'PA34 4UG', 'PA34 4UH'],
-                restorationTime: '2015-12-06T03:00:00Z',
-                timeOfIncident: '2015-12-05T23:06:00Z'
+                restorationTime: '2015-12-06T03:00:00+00:00',
+                timeOfIncident: '2015-12-05T23:06:00+00:00'
             }, {
                 info: 'We apologise for the loss of supply. We currently have a fault affecting the areas listed. Our engineers are on site working to get the power back on as quickly as they can. If you need more information, please call us on 0800 072 7282 and quote reference \'AG2661\'',
                 latitude: 50.97940510828708,
                 longitude: -1.9105652210901842,
                 numberEffected: null,
                 postCode: ['SP6 3LA', 'SP6 3LR', 'SP6 3LS', 'SP6 3LT'],
-                restorationTime: '2015-12-06T02:00:00Z',
-                timeOfIncident: '2015-12-05T14:58:00Z'
+                restorationTime: '2015-12-06T02:00:00+00:00',
+                timeOfIncident: '2015-12-05T14:58:00+00:00'
             }],
             uri: 'https://www.ssepd.co.uk/Powertrack/'
         };
@@ -195,8 +195,8 @@ test('process json from Electricity North West', function (assert) {
                 longitude: -2.345365047454834,
                 numberEffected: null,
                 postCode: 'BB5 6HJ',
-                restorationTime: '04/12/2015 22:00',
-                timeOfIncident: '04/12/2015 15:32'
+                restorationTime: '2015-12-04T22:00:00+00:00',
+                timeOfIncident: '2015-12-04T15:32:00+00:00'
             }],
             uri: 'http://www.enwl.co.uk/power-cuts/live-postcode-search'
         };
@@ -217,8 +217,8 @@ test('parse html from GTC', function (assert) {
                 longitude: null,
                 numberEffected: null,
                 postCode: ['Whitecross Gardens.'],
-                restorationTime: 'Closed',
-                timeOfIncident: 'Dec 30, 2015, 09:59 AM'
+                restorationTime: null,
+                timeOfIncident: '2015-12-30T09:59:00+00:00'
             }],
             uri: 'http://www.gtc-uk.co.uk/supply-interruptions'
         };
