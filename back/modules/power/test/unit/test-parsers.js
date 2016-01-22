@@ -34,7 +34,7 @@ test('parse js files from UK Power Networks', function (assert) {
             timeOfIncident: '2015-12-06T14:49:00+00:00',
             restorationTime: null
         }],
-        uri: 'http://www.ukpowernetworks.co.uk/internet/en/fault-map/?postcode=WD5+1AB'
+        uri: 'http://www.ukpowernetworks.co.uk/internet/en/fault-map/'
     };
 
     assert.deepEqual(parsers.ukpowernetworksParser(arrayOfJsResults, 'WD5+1AB'), expected, 'should be same');
@@ -194,7 +194,7 @@ test('process json from Electricity North West', function (assert) {
                 latitude: 53.76485061645508,
                 longitude: -2.345365047454834,
                 numberEffected: null,
-                postCode: 'BB5 6HJ',
+                postCode: ['BB5 6HJ'],
                 restorationTime: '2015-12-04T22:00:00+00:00',
                 timeOfIncident: '2015-12-04T15:32:00+00:00'
             }],

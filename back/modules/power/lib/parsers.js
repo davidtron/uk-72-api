@@ -41,7 +41,7 @@ function ukpowernetworksParser(arrayOfJSResults, postCodePlus) {
     // then flatten into one array of outages
     return {
         'network': 'ukpowernetworks',
-        'uri': 'http://www.ukpowernetworks.co.uk/internet/en/fault-map/?postcode=' + postCodePlus,
+        'uri': 'http://www.ukpowernetworks.co.uk/internet/en/fault-map/',
         'outages': [].concat.apply([], incidentsArrays)
     };
 }
@@ -190,7 +190,7 @@ function electricityNorthWestParser(json) {
             'latitude': incidentArray.Latitude,
             'longitude': incidentArray.Longitude,
             'timeOfIncident': dateConv(incidentArray.OutageDate, 'DD/MM/YYYY HH:mm'),
-            'postCode': incidentArray.FullPostcode,
+            'postCode': [incidentArray.FullPostcode],
             'numberEffected': null,
             'restorationTime': dateConv(incidentArray.EstimatedTimeOfRestoration, 'DD/MM/YYYY HH:mm'),
             'info': incidentArray.CustomerInformation
