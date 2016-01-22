@@ -16,7 +16,7 @@ test('parse js files from UK Power Networks', function (assert) {
     var arrayOfJsResults = [lpn, epn, spn];
 
     var expected = {
-        network: 'ukpowernetworks',
+        network: 'UK Power Networks',
         outages: [{
             info: 'We\'ve had to turn off power in your area',
             latitude: 51.54580744306085,
@@ -46,7 +46,7 @@ test('parse html from Western Power', function (assert) {
         assert.plan(1);
         var html = {body: data.toString()};
         var expected = {
-            network: 'westernpower',
+            network: 'Western Power',
             outages: [{
                 info: 'For further information please contact us on 0800 6783 105',
                 latitude: 51.46647,
@@ -79,7 +79,7 @@ test('parse html from Scottish Power Energy Networks', function (assert) {
         var html = {body: data.toString()};
         var postcode = 'LL57 4PW';
         var expected = {
-            network: 'spenergynetworks',
+            network: 'SP Energy Networks',
             outages: [{
                 info: 'There was a fault in your area which has now been resolved. If you are still without power. please call us on: 0800 092 9290 0800 001 5400   Please note that the information contained on this webpage is for information only.  While every effort has been made to ensure accuracy, SP Energy Networks accepts no liability for any losses incurred following reliance on the information contained on this webpage.',
                 latitude: null,
@@ -108,7 +108,7 @@ test('process json from Northern Power Grid', function (assert) {
 
         var postcode = 'DH7 7DD';
         var expected = {
-            network: 'northernpowergrid',
+            network: 'Northern Power Grid',
             uri: 'https://www.northernpowergrid.com/power-cuts-checker/DH7%207DD',
             outages: [{
                 latitude: 54.7833,
@@ -136,7 +136,7 @@ test('process json from Scottish and Southern Energy', function (assert) {
         };
 
         var expected = {
-            network: 'ssepd',
+            network: 'Scottish and Southern Energy',
             outages: [{
                 info: 'We apologise for the loss of supply. We currently have a fault affecting the areas listed. Our engineers are working to get the power back on as quickly as they can. If you need more information, please call us on 0800 300 999 and quote reference \'AG2916\'',
                 latitude: 56.358715046569145,
@@ -188,7 +188,7 @@ test('process json from Electricity North West', function (assert) {
         };
 
         var expected = {
-            network: 'electricitynorthwest',
+            network: 'Electricity North West',
             outages: [{
                 info: 'We have a local cable fault affecting your area. We believe that this affects your property. This fault is due to damage to our equipment. Our engineers are aware of the problem. Our team is now on site and working to restore your supply. We have restored as many customers as possible by alternative means. As you are close to the fault your supply will be restored once we have completed our repairs, we estimate this should be by 22:00 hours today. If this changes as the job progresses we will keep you updated. We apologise for the inconvenience caused by the interruption to your supply and our engineers will work to restore your power as soon as possible. This message was updated at 16:15 hours today.',
                 latitude: 53.76485061645508,
@@ -210,7 +210,7 @@ test('parse html from GTC', function (assert) {
 
         assert.plan(1);
         var html = {body: data.toString()};
-        var expected = {network: 'gtc',
+        var expected = {network: 'GTC',
             outages: [{
                 info: 'Flooding in YorkGTC reference N0007866-1Affected areas: Maplehurst Avenue, Huntington Mews, Ramsay Close, Whitecross Gardens.As a result of recent flooding in the area, the gas supply network has been interrupted. Engineers are monitoring the flood area and shall restore supplies as quickly as possible. Should require further information, please telephone 0800 111 999 or visit this website for update.',
                 latitude: null,

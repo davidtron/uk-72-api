@@ -40,7 +40,7 @@ function ukpowernetworksParser(arrayOfJSResults, postCodePlus) {
 
     // then flatten into one array of outages
     return {
-        'network': 'ukpowernetworks',
+        'network': 'UK Power Networks',
         'uri': 'http://www.ukpowernetworks.co.uk/internet/en/fault-map/',
         'outages': [].concat.apply([], incidentsArrays)
     };
@@ -75,7 +75,7 @@ function westernPowerParser(html) {
     });
 
     return {
-        'network': 'westernpower',
+        'network': 'Western Power',
         'uri': 'http://www.westernpower.co.uk/Power-outages/Power-cuts-in-your-area.aspx',
         'outages': outages
     };
@@ -112,7 +112,7 @@ function scottishPowerEnergyNetworksParser(html, postcode) {
         var postCodeWithoutSpaces = postcode.replace(/\s+/g, '');
 
         return {
-            'network': 'spenergynetworks',
+            'network': 'SP Energy Networks',
             'uri': 'http://www.spenergynetworks.co.uk/pages/postcode_results.asp?post=' + postCodeWithoutSpaces,
             'outages': outages
         };
@@ -146,7 +146,7 @@ function northernPowerGridParser(html, postcode) {
     var uriEncodedPostCode = postcode.replace(/\s+/g, '%20');
 
     return {
-        'network': 'northernpowergrid',
+        'network': 'Northern Power Grid',
         'uri': 'https://www.northernpowergrid.com/power-cuts-checker/' + uriEncodedPostCode,
         'outages': outages
     };
@@ -173,7 +173,7 @@ function scottishAndSouthernParser(json) {
     }
 
     return {
-        'network': 'ssepd',
+        'network': 'Scottish and Southern Energy',
         'uri': 'https://www.ssepd.co.uk/Powertrack/',
         'outages': outages
     };
@@ -198,7 +198,7 @@ function electricityNorthWestParser(json) {
     });
 
     return {
-        'network': 'electricitynorthwest',
+        'network': 'Electricity North West',
         'uri': 'http://www.enwl.co.uk/power-cuts/live-postcode-search',
         'outages': outages
     };
@@ -233,7 +233,7 @@ function gtcParser(html) {
     });
 
     return {
-        'network': 'gtc',
+        'network': 'GTC',
         'uri': 'http://www.gtc-uk.co.uk/supply-interruptions',
         'outages': outages
     };
