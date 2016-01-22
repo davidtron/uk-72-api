@@ -20,6 +20,11 @@ function processWeatherWarnings(data) {
     var weatherWarnings = [];
 
     function createWeatherWarning(warning) {
+
+        var regionNames = warning.ZoneList.members.Zone.RegionList.members.Region.map(function(region) {
+            return region.regionName;
+        });
+
         var processedWarning = {
             'validFrom': warning.validFrom,
             'validTo': warning.validTo,
@@ -30,7 +35,8 @@ function processWeatherWarnings(data) {
             'warningLikelihood': warning.warningLikelihood,
             'warningImpact': warning.warningImpact,
             'id': warning.warningId,
-            'coord': extractWeatherCoordinate(warning)
+            'coord': extractWeatherCoordinate(warning),
+            'regions' : regionNames
         };
         weatherWarnings.push(processedWarning);
     }
@@ -38,6 +44,7 @@ function processWeatherWarnings(data) {
     // Since we have disabled explicit array, the json can be in 2 forms
     // Multiple warnings are in array  i.e data.WarningList.members.NSWWarning.length > 0 === true
     // Single warnings are in object
+
 
 
     if(data.WarningList.members.NSWWarning && data.WarningList.members.NSWWarning.length > 0) {
