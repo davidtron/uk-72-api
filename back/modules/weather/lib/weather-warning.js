@@ -21,9 +21,18 @@ function processWeatherWarnings(data) {
 
     function createWeatherWarning(warning) {
 
-        var regionNames = warning.ZoneList.members.Zone.RegionList.members.Region.map(function(region) {
-            return region.regionName;
-        });
+        var regionNames = [];
+        var regions = warning.ZoneList.members.Zone.RegionList.members.Region
+
+        if(regions) {
+            if(Array.isArray(regions)) {
+                regionNames = regions.map(function(region) {
+                    return region.regionName;
+                });
+            } else {
+                regionNames = [regions.regionName];
+            }
+        }
 
         var processedWarning = {
             'validFrom': warning.validFrom,
